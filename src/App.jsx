@@ -6,7 +6,7 @@ import "./App.css";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
 ``;
-import { roterConfigu } from "./Router/AppRouter";
+import { roterConfigu } from "./router/ApiRoute";
 
 function App() {
   function AppRouter() {
