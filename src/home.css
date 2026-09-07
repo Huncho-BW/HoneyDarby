@@ -1,0 +1,198 @@
+
+
+.bg-preview{
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.navbar{
+    padding: 24px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 92px;
+    z-index: 100;
+    
+    
+
+}
+
+.main{
+    padding-top:80px ;
+}
+
+.navbar-homePage{
+    color: #fff9f0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Cormorant Garamond", serif;
+
+}
+
+.navbar-text{
+    color: #fff9f0;
+    font-size: 14px;
+
+    font-family: "manrope", serif;
+}
+
+.navbar-border{
+    width: 144px;
+    height: 44px;
+    border: 0 solid;
+    background:#fff9f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-border > button{
+    color: #2d211b;
+        font-size: 14px;
+    font-weight: 300;
+        font-family: "manrope", serif;
+}
+
+.navbar-b-transparent{
+    border: 1px solid #fff9f0;
+    width: 144px;
+        height: 44px;
+        border-radius: 12px;
+            display: flex;
+            justify-content: center;
+}
+
+.navbar-b-transparent > button{
+    color: #fff9f0;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: "manrope", serif;
+}
+
+.hero-header{
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    
+}
+
+.home-food-header{
+    padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        justify-content: space-between;
+        
+}
+.home-food-header > div {
+    width: 100%;
+}
+
+.home-service-header{
+    padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+}
+
+.home-service{
+display: flex;
+justify-content: space-between;
+    align-items: center;
+    
+}
+
+.home-class-header{
+    padding-left: 68px;
+        padding-right: 68px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    
+        display: flex;
+            align-items: center;
+            gap: 40px;
+            justify-content: space-between;
+}
+
+
+
+
+
+.home-specail-header{
+    padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        justify-content: center;
+
+}
+
+.home-footer{
+    padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        justify-content: center;
+}
+
+.class-bg{
+    width: 100% ;
+ 
+    height:429px ;
+    border: 0 solid;
+    border-radius: 12px
+}
+
+.class-bg > img{
+    width: 572px;
+    height: 100%;
+    background-size: contain;
+border: 0 solid;
+    border-radius: 12px
+}
+
+.class-col{
+    display: flex;
+    flex-direction: column;
+width: 100%;
+    gap: 20px;
+}
+
+.home-service-bg{
+    background-color: #e9dac3;
+
+}
+
+.home-specail-bg{
+    background-color: #4a2e22;
+}

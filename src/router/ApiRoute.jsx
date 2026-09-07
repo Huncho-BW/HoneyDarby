@@ -8,13 +8,12 @@ import Contact from "../Component/Contact";
 import Layout from "../Component/Layout";
 import About from "../Component/About";
 import MakeInquriy from "../Component/MakeInQuriy";
-
+import Home from "../Component/Home";
 export const roterConfigu = [
   {
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <Service /> },
       { path: "service", element: <Service /> },
       { path: "menu", element: <Menu /> },
       { path: "OurWork", element: <OurWork /> },

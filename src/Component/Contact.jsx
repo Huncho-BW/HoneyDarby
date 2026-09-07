@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Contact() {
-  <h1>contact</h1>;
+  return <h1>contact</h1>;
 }
