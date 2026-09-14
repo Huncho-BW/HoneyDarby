@@ -25,10 +25,11 @@
 
 .main{
     padding-top:80px ;
+    
 }
 
 .navbar-homePage{
-    color: #fff9f0;
+   
     font-size: 24px;
     font-weight: 600;
     font-family: "Cormorant Garamond", serif;
@@ -36,7 +37,7 @@
 }
 
 .navbar-text{
-    color: #fff9f0;
+    
     font-size: 14px;
 
     font-family: "manrope", serif;
@@ -46,14 +47,14 @@
     width: 144px;
     height: 44px;
     border: 0 solid;
-    background:#fff9f0;
+    
     border-radius: 12px;
     display: flex;
     justify-content: center;
 }
 
 .navbar-border > button{
-    color: #2d211b;
+  
         font-size: 14px;
     font-weight: 300;
         font-family: "manrope", serif;
@@ -78,14 +79,15 @@
 .hero-header{
     padding-left: 48px;
     padding-right: 48px;
-    padding-bottom: 100px;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
    position: relative;
-    height: 100%;
+    
     width: 100%;
-    padding-top: 100px;
+    gap: 15px;
+    padding-top: 80px;
     
 }
 
@@ -94,11 +96,11 @@
         padding-right: 48px;
         padding-bottom: 100px;
         padding-top: 100px;
-
-        display: flex;
+ 
+        display: grid;
         align-items: center;
         gap: 40px;
-        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
         
 }
 .home-food-header > div {

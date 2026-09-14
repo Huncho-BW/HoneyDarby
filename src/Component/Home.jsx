@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <div className="bg-[#FFF9F0]">
+      <div>
         <HomeFood />
 
         <div className="home-service-bg">

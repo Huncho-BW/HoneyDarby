@@ -1,0 +1,26 @@
+
+.about-padd{
+    padding: 64px 48px;}
+    
+    
+    .about-section1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+    }
+
+    .about-grid{
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .about-section1 img{
+        width: 572px;
+        height: 791px;
+        border-radius: 12px;
+    }
+
+    .about-section2-bg{
+        background-color: #e9dac3;
+    }

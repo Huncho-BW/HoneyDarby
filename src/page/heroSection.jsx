@@ -20,8 +20,8 @@ export default function HeroSection() {
         </span>
       </div>
 
-      <div className="flex gap-[16px] items-center mt-[20px]">
-        <div className="navbar-border leading-[143%] ">
+      <div className="flex gap-[16px] items-center mt-[20px] pb-[50px]">
+        <div className="navbar-border bg-[#fff9f0] leading-[143%] ">
           <button>Make an Inquiry</button>
         </div>
         <div className="navbar-b-transparent">

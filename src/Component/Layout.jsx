@@ -3,7 +3,8 @@ import { Outlet, useLocation } from "react-router";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import bgpreview from "../assets/bg-preview.jpeg";
-
+import previewTwo from "../assets/preview2.jpeg";
+import previewOne from "../assets/preview1.jpeg";
 export default function Layout() {
   const location = useLocation();
 
