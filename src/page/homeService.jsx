@@ -1,6 +1,20 @@
 import React from "react";
 
 export default function HomeService() {
+  const homeService = [
+    {
+      title: "Weddings",
+      name: " A generous feast for your most important yes.",
+    },
+    { title: "Birthday & Celebration", name: "joyful menus made for sharing." },
+    {
+      title: "Corporate Event",
+      name: "Confident hospitality for your people.",
+    },
+    { title: "Private Event", name: "Personal service for intimate tables." },
+    { title: "Small Chop", name: "Beautiful trays for welcome moments." },
+    { title: "Custom Catering", name: "A menu shaped around your occasion." },
+  ];
   return (
     <div className="home-service-header">
       <div className="home-service">
@@ -20,13 +34,17 @@ export default function HomeService() {
       </div>
 
       <div>
-        <div className="pt-[20px]">
-          <h1 className="text-[#2d211b] text-[24px] font-[300]  leading-[133%] font-['Cormorant_Garamond']">
-            Weddings
-          </h1>
-          <p className="text-[#6f5b4b] text-[14px] leading-[143%] font-['manrope']">
-            A generous feast for your most important yes.
-          </p>
+        <div className="home-service-grid">
+          {homeService.map((item) => (
+            <div>
+              <h1 className="text-[#2d211b] text-[24px] font-[300]  leading-[133%] font-['Cormorant_Garamond']">
+                {item.title}
+              </h1>
+              <p className="text-[#6f5b4b] text-[14px] leading-[143%] font-['manrope']">
+                {item.name}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

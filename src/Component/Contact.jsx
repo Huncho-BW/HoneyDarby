@@ -9,13 +9,13 @@ export default function Contact() {
       logo: <FaWhatsapp />,
       name: "Whatapp",
       subtext: "Contact handle to be confirmed",
-      link: "",
+      link: "https://wa.me/2348026684176",
     },
     {
       logo: <FiPhone />,
       name: "Phone",
       subtext: "Number to be confirmed",
-      link: "",
+      link: "tel:+2348026684176",
     },
     {
       logo: <FaTiktok />,
@@ -26,7 +26,7 @@ export default function Contact() {
   ];
   return (
     <div className=" contact-padd">
-      <section>
+      <section className="contact-1">
         <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
           Contact & inquiry
         </span>

@@ -202,6 +202,12 @@ width: 100%;
     display: none;
 }
 
+.home-service-grid{
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        
+}
 
 /* =========================================
    MOBILE HOME LAYOUT
@@ -209,6 +215,12 @@ width: 100%;
 
 @media (max-width: 768px) {
 
+
+    .home-service-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
     .hero-header{
         display: block;
         

@@ -12,7 +12,7 @@ export default function Service() {
             <span className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
               Services
             </span>
-            <h1 className=" text-left font-['Cormorant_Garamond'] text-[#000000] text-[72px] font-[600] leading-[100%] ">
+            <h1 className=" text-left font-['Cormorant_Garamond']  text-[#000000] text-[72px] font-[600] leading-[100%] ">
               Catering shaped <br />
               around your occasion.
             </h1>
