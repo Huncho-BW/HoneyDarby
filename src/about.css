@@ -24,3 +24,69 @@
     .about-section2-bg{
         background-color: #e9dac3;
     }
+
+
+    
+        /* =========================================
+       MOBILE ABOUT LAYOUT
+    ========================================= */
+    
+        @media (max-width: 768px) {
+    
+            /* =========================
+           ABOUT SPACING
+        ========================= */
+    
+            .about-padd {
+                padding: 60px 24px;
+            }
+    
+    
+            /* =========================
+           ABOUT SECTION ONE
+        ========================= */
+    
+            .about-section1 {
+                display: block;
+            }
+    
+            .about-section1>* {
+                margin-bottom: 32px;
+            }
+    
+            .about-section1>*:last-child {
+                margin-bottom: 0;
+            }
+    
+    
+            /* =========================
+           ABOUT GRID
+        ========================= */
+    
+            .about-grid {
+                display: block;
+            }
+    
+            .about-grid>* {
+                margin-bottom: 32px;
+            }
+    
+            .about-grid>*:last-child {
+                margin-bottom: 0;
+            }
+    
+    
+            /* =========================
+           ABOUT IMAGE
+        ========================= */
+    
+            .about-section1 img {
+                width: 100%;
+                height: auto;
+                max-height: 791px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
+    
+        

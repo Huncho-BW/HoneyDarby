@@ -198,3 +198,197 @@ width: 100%;
 .home-specail-bg{
     background-color: #4a2e22;
 }
+.mobile-navbar {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE HOME LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-header{
+        display: block;
+        
+    }
+
+    .navbar-border{
+        width: 100%;
+    }
+    .navbar-b-transparent{
+        width: 100%;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .desktop-navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+    }
+
+    .mobile-menu-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-content {
+        width: calc(100vw - 32px);
+        max-width: 360px;
+        padding: 20px;
+        border-radius: 12px;
+        outline: none;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        animation: mobileMenuIn 0.2s ease;
+    }
+
+    .mobile-menu-home {
+        background: #fff9f0;
+        color: #2d211b;
+    }
+
+    .mobile-menu-default {
+        background: #f7f0e5;
+        color: #000000;
+    }
+
+    .mobile-menu-item {
+        list-style: none;
+        outline: none;
+    }
+
+    .mobile-menu-link {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-menu-link:hover {
+        background: #e6d5be;
+    }
+
+    .mobile-menu-separator {
+        height: 1px;
+        margin: 12px 0;
+        background: #d8c8b5;
+    }
+
+    .mobile-inquiry-item {
+        list-style: none;
+        outline: none;
+    }
+
+    .mobile-inquiry-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        text-align: center;
+        background: #2d211b;
+        color: #fff9f0;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-inquiry-button:hover {
+        background: #e6d5be;
+        color: #000000;
+    }
+
+
+    /* =========================
+       HOME SECTIONS
+    ========================= */
+
+    .home-food-header {
+        display: block;
+    }
+
+    .home-service {
+        display: block;
+    }
+
+    .home-class-header {
+        display: block;
+    }
+
+
+    /* =========================
+       MOBILE SPACING
+    ========================= */
+
+    .home-food-header,
+    .home-service-header,
+    .home-class-header,
+    .home-specail-header,
+    .home-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    /* =========================
+       MOBILE IMAGE
+    ========================= */
+
+    .class-bg {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .class-bg>img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       MOBILE COLUMN SPACING
+    ========================= */
+
+    .home-food-header>div,
+    .home-service>div,
+    .home-class-header>div {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .home-food-header>div:last-child,
+    .home-service>div:last-child,
+    .home-class-header>div:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    @keyframes mobileMenuIn {
+        from {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+

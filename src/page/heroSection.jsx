@@ -9,7 +9,7 @@ export default function HeroSection() {
         </span>
       </div>
       <div>
-        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px] font-[600] leading-[100%] ">
+        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px]  max-[768px]:text-[48px] font-[600] leading-[100%] ">
           Made for the moments everyone remembers
         </h1>
       </div>
@@ -20,7 +20,7 @@ export default function HeroSection() {
         </span>
       </div>
 
-      <div className="flex gap-[16px] items-center mt-[20px] pb-[50px]">
+      <div className=" max-[798px]:flex-col  flex  gap-[16px] items-center mt-[20px] pb-[50px]">
         <div className="navbar-border bg-[#fff9f0] leading-[143%] ">
           <button>Make an Inquiry</button>
         </div>

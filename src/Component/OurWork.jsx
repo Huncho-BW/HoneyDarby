@@ -4,12 +4,14 @@ import previewOne from "../assets/preview1.jpeg";
 export default function OurWork() {
   const projects = [
     {
+      title: "Small chops",
       image: previewTwo,
       orientation: "portrait",
       name: "Wedding Reception",
       location: "Lagos, Nigeria",
     },
     {
+      title: "Delivery ",
       image: previewOne,
       orientation: "landscape",
       name: "Birthday Celebration",
@@ -43,9 +45,13 @@ export default function OurWork() {
     <>
       <section className="ourwork-pad">
         <div>
-          <span>Our Work</span>
-          <h1>Tables worth remembering.</h1>
-          <p>
+          <span className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
+            Our Work
+          </span>
+          <h1 className=" text-left font-['Cormorant_Garamond'] text-[#000000] text-[72px] font-[600] leading-[100%] ">
+            Tables worth remembering.
+          </h1>
+          <p className=" text-left text-[#6f5b4b] text-[16px]  leading-[200%] font-['manrope']  ">
             A selection of HoneyDerby occasions, from intimate celebrations to
             generous wedding tables. Open any event to experience the full
             gallery
@@ -66,8 +72,15 @@ export default function OurWork() {
                   <div>
                     <img src={item.image} alt="" />
                     <div className="project-image">
-                      <h1>Event: {item.name}</h1>
-                      <h1>Location: {item.location}</h1>
+                      <h1 className="  font-['Cormorant_Garamond'] text-[#2d211b] text-[30px] font-[300] leading-[120%] ">
+                        {item.title}
+                      </h1>
+                      <h1 className="text-[#6f5b4b]  text-[14px]  leading-[143%] font-['manrope']  ">
+                        Location: {item.location}
+                      </h1>
+                      <h1 className=" mt-2 text-[#9a5b32]  text-[12px] tracking-[2px] leading-[133%] font-['manrope']  ">
+                        Event: {item.name}
+                      </h1>
                     </div>
                   </div>
                 </div>

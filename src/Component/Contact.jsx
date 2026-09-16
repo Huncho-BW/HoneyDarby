@@ -1,6 +1,29 @@
 import React from "react";
-
+import { FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { href } from "react-router";
 export default function Contact() {
+  const contact = [
+    {
+      logo: <FaWhatsapp />,
+      name: "Whatapp",
+      subtext: "Contact handle to be confirmed",
+      link: "",
+    },
+    {
+      logo: <FiPhone />,
+      name: "Phone",
+      subtext: "Number to be confirmed",
+      link: "",
+    },
+    {
+      logo: <FaTiktok />,
+      name: "Tiktok",
+      subtext: "Handle to be comfired",
+      link: "",
+    },
+  ];
   return (
     <div className=" contact-padd">
       <section>
@@ -16,15 +39,19 @@ export default function Contact() {
         </p>
 
         <div className="contact-grid">
-          <div className="contact-border">
-            <span className="text-[#4a2e22]">logo</span>
-            <h1 className="text-[#2d211b]  text-[16px]  leading-[150%] font-['manrope']  ">
-              WhatsApp
-            </h1>
-            <p className="text-[#6f5b4b]  text-[14px]  leading-[143%] font-['manrope']  ">
-              Contact handle to be confirmed
-            </p>
-          </div>
+          {contact.map((item) => (
+            <a href={item.link}>
+              <div className="contact-border">
+                <span className="text-[#4a2e22]">{item.logo}</span>
+                <h1 className="text-[#2d211b]  text-[16px]  leading-[150%] font-['manrope']  ">
+                  {item.name}
+                </h1>
+                <p className="text-[#6f5b4b]  text-[14px]  leading-[143%] font-['manrope']  ">
+                  {item.subtext}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
       <section className="contact-2">

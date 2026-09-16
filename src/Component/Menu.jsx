@@ -1,6 +1,48 @@
 import React from "react";
 import previewOne from "../assets/preview1.jpeg";
 export default function Menu() {
+  const soups = [
+    "Efo Riro Soup",
+    "Oha Soup",
+    "Bitter Leaf Soup",
+    "Fish Soup",
+    "Banga Soup",
+    "Egusi Soup",
+    "Ewedu & Gbegiri",
+    "Ogbono Soup",
+  ];
+
+  const proteins = ["Beef", "Cow Leg", "Turkey", "Chicken", "Fish"];
+
+  const mainDishes = [
+    "White Rice",
+    "Jollof Rice",
+    "Fried Rice",
+    "Ofada Rice",
+    "Asaro",
+    "Beans & Plantain",
+    "Smokey Jollof Rice",
+    "Asun Jollof Rice",
+    "Coconut Rice",
+  ];
+
+  const continentalDishes = [
+    "Rice",
+    "Pasta",
+    "Spaghetti",
+    "Macaroni",
+    "Potatoes",
+    "French Fries",
+    "Mashed Potatoes",
+    "Bread",
+    "Beans",
+    "Vegetables",
+    "Salad",
+    "Chicken",
+    "Fish",
+    "Beef",
+    "Eggs",
+  ];
   return (
     <>
       <section className=" menu-section1 section-menu-padd">
@@ -33,10 +75,14 @@ export default function Menu() {
                 Rice & main dishes
               </h1>
               <div>
-                <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
-                  rice
-                </h1>
-                <span className="divider"></span>
+                {mainDishes.map((item) => (
+                  <>
+                    <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
+                      {item}
+                    </h1>
+                    <span className="divider"></span>
+                  </>
+                ))}
               </div>
             </div>
             <div>
@@ -44,11 +90,14 @@ export default function Menu() {
                 Soups & sides
               </h1>
               <div>
-                <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
-                  {" "}
-                  amala
-                </h1>
-                <span className="divider"></span>
+                {soups.map((item) => (
+                  <>
+                    <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
+                      {item}
+                    </h1>
+                    <span className="divider"></span>
+                  </>
+                ))}
               </div>
             </div>
             <div>
@@ -56,10 +105,14 @@ export default function Menu() {
                 Proteins & bites
               </h1>
               <div>
-                <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
-                  beef & fish{" "}
-                </h1>
-                <span className="divider"></span>
+                {proteins.map((item) => (
+                  <>
+                    <h1 className="text-[#2d211b]  text-[14px]  leading-[143%] font-['manrope']  ">
+                      {item}
+                    </h1>
+                    <span className="divider"></span>
+                  </>
+                ))}
               </div>
             </div>
           </div>
@@ -75,17 +128,13 @@ export default function Menu() {
         </h1>
 
         <div className="menu-grid">
-          <div>
-            <h1 className="text-[#2d211b]  text-[16px]  leading-[143%] font-['manrope']  ">
-              yam
-            </h1>
-          </div>
-          <div>
-            <h1>beans</h1>
-          </div>
-          <div>
-            <h1>bread</h1>
-          </div>
+          {continentalDishes.map((item) => (
+            <div>
+              <h1 className="text-[#2d211b]  text-[16px]  leading-[143%] font-['manrope']  ">
+                {item}
+              </h1>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -83,3 +83,102 @@
 .sect-3-bg{
     background-color: #4a2e22;
 }
+
+
+
+/* =========================================
+   MOBILE SERVICE LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       SECTION SPACING
+    ========================= */
+
+    .section-one,
+    .section-two,
+    .section-three {
+        padding: 60px 24px;
+    }
+
+
+    /* =========================
+       WEDDING SERVICE
+    ========================= */
+
+    .wedding-service {
+        display: block;
+    }
+
+    .wedding-service>img {
+        width: 100%;
+        height: auto;
+        max-height: 432px;
+        object-fit: cover;
+        margin-bottom: 32px;
+    }
+
+
+    /* =========================
+       CELEBRATION SERVICE
+    ========================= */
+
+    .celebration-service {
+        display: block;
+    }
+
+    .cel-img {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        padding: 24px;
+        margin-bottom: 32px;
+    }
+
+    .celeb-img {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       CELEBRATION CARDS
+    ========================= */
+
+    .celeb-service {
+        display: block;
+    }
+
+    .celeb-service>* {
+        margin-bottom: 32px;
+    }
+
+    .celeb-service>*:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+       SECTION THREE
+    ========================= */
+
+    .section-three {
+        display: block;
+    }
+
+
+    /* =========================
+       CENTER SECTION
+    ========================= */
+
+    .section-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+

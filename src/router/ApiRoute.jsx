@@ -18,8 +18,8 @@ export const roterConfigu = [
       { path: "menu", element: <Menu /> },
       { path: "OurWork", element: <OurWork /> },
       { path: "About", element: <About /> },
-      { path: "contact", element: <Contact /> },
-      { path: "makeIq", element: <MakeInquriy /> },
+
+      { path: "makeIq", element: <Contact /> },
     ],
   },
 ];

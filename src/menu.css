@@ -41,3 +41,48 @@
     border: 1px solid #d7c5ae;
     background-color: #fff9f0;
 }
+
+ @media (max-width: 768px) {
+    .section-menu-padd {
+        padding: 60px 24px;
+    }
+
+    .menu-section1 {
+        display: block;
+    }
+
+    .menu-section1>div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    .menu-section1>img {
+        width: 100%;
+        height: auto;
+        max-height: 432px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 32px;
+    }
+
+    .menu-grid {
+        display: block;
+    }
+
+    .menu-grid>* {
+        margin-bottom: 32px;
+    }
+
+    .menu-grid>*:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-section4>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
