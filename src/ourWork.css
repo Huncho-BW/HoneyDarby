@@ -1,4 +1,7 @@
 
+
+
+
 .ourwork-pad {
     padding: 64px 48px;
 }
@@ -15,51 +18,95 @@
     align-items: flex-start;
 }
 
-.project-image{
-    padding: 20px;
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.portiat-sp>div,
+.land-dp>div {
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
     background-color: #fff9f0;
+
+    /* Card animation */
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 
-.portiat-sp > div{
- width: 428px;
- height: 500px;
- border: 0px solid ;
- border-radius: 12px;
- 
+/* Card hover */
+.portiat-sp>div:hover,
+.land-dp>div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(74, 46, 34, 0.16);
 }
 
-.portiat-sp > div > img{
+
+/* =========================
+   PORTRAIT CARD
+========================= */
+
+.portiat-sp>div {
+    width: 428px;
+    height: 500px;
+}
+
+
+/* =========================
+   LANDSCAPE CARD
+========================= */
+
+.land-dp>div {
+    width: 682px;
+    height: 500px;
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.portiat-sp>div>img,
+.land-dp>div>img {
+    display: block;
     width: 100%;
     height: 300px;
-    border: 0px solid;
-    
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
 }
 
 
-.land-dp > div{
-width: 682px;
-    height: 500px;
-    border: 0px solid;
-    border-radius: 12px;
-    
-}
-
-.land-dp > div > img{
-    width: 100%;
-        height: 300px;
-        border: 0px solid;
-    
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-    
+/* Image zoom when card is hovered */
+.portiat-sp>div:hover>img,
+.land-dp>div:hover>img {
+    transform: scale(1.02);
 }
 
 
+/* =========================
+   PROJECT INFORMATION
+========================= */
 
- @media (max-width: 768px) {
+.project-image {
+    padding: 20px;
+    background-color: #fff9f0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
     .ourwork-pad {
         padding: 60px 24px;
     }
@@ -74,26 +121,39 @@ width: 682px;
         display: block;
     }
 
+
+    /* Both cards become full width */
+    .portiat-sp>div,
+    .land-dp>div {
+        width: 100%;
+        min-height: 500px;
+        border: 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+
+    /* Mobile image */
+    .portiat-sp>div>img,
+    .land-dp>div>img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+
+    /* Project information */
     .project-image {
         padding: 16px;
     }
 
-    .portiat-sp>div,
-    .land-dp>div {
-        width: 100%;
-        height: 500px;
-        border: 0 solid;
-        border-radius: 12px;
-    }
 
-    .portiat-sp>div>img,
-    .land-dp>div>img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border: 0 solid;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+    /* Mobile hover */
+    .portiat-sp>div:hover,
+    .land-dp>div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(74, 46, 34, 0.14);
     }
 }
 

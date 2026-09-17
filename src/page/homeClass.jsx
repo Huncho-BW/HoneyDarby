@@ -29,7 +29,7 @@ export default function HomeClass() {
             in front of it.
           </p>
         </div>
-        <NavLink className="navbar-border" to={"contact"}>
+        <NavLink className="navbar-border" to={"menu"}>
           {({ isActive }) => (
             <div
               className={`navbar-border bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}

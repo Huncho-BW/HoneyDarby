@@ -14,7 +14,8 @@ import image10 from "../assets/image10.jpeg";
 import image11 from "../assets/image11.jpeg";
 import image12 from "../assets/image12.jpeg";
 import image13 from "../assets/image13.jpeg";
-import image14 from "../assets/image14.jpeg";
+import image17 from "../assets/image17.jpeg";
+import image20 from "../assets/image20.jpeg";
 export default function OurWork() {
   const projects = [
     {
@@ -44,6 +45,48 @@ export default function OurWork() {
       orientation: "portrait",
       name: "Wedding Celebration",
       location: "Ikoyi, Lagos",
+    },
+    {
+      title: "Delivery Package  ",
+      image: image3,
+      orientation: "portrait",
+      name: "Wedding Celebration",
+      location: "Ikoyi, Lagos",
+    },
+    {
+      title: "Delivery Package",
+      image: image17,
+      orientation: "landscape",
+      name: "Private Dinner",
+      location: "Lekki, Lagos",
+    },
+    {
+      title: "Delivery Package  ",
+      image: image9,
+      orientation: "portrait",
+      name: "Wedding Celebration",
+      location: "Ikoyi, Lagos",
+    },
+    {
+      title: "Delivery Package",
+      image: image11,
+      orientation: "landscape",
+      name: "Private Dinner",
+      location: "Lekki, Lagos",
+    },
+    {
+      title: "Delivery Package  ",
+      image: image13,
+      orientation: "portrait",
+      name: "Wedding Celebration",
+      location: "Ikoyi, Lagos",
+    },
+    {
+      title: "Delivery Package",
+      image: image20,
+      orientation: "landscape",
+      name: "Private Dinner",
+      location: "Lekki, Lagos",
     },
   ];
 

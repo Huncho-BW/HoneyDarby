@@ -19,6 +19,7 @@
         width: 572px;
         height: 791px;
         border-radius: 12px;
+        object-fit: contain;
     }
 
     .about-section2-bg{

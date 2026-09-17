@@ -1,5 +1,6 @@
 import React from "react";
-import previewOne from "../assets/preview1.jpeg";
+import previewOne from "../assets/sweet.jpg";
+
 export default function About() {
   const foodQuilty = [
     {
