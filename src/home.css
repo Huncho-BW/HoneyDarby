@@ -24,7 +24,8 @@
 }
 
 .main{
-    padding-top:80px ;
+   
+    padding: 80px 48px;
     
 }
 
@@ -251,7 +252,11 @@ width: 100%;
         flex-direction: column;
         gap: 20px;
     }
-   
+    .hero-header{
+        display: block;
+        padding: 80px 24px;
+        
+    }
 
     .navbar-border{
         width: 100%;
@@ -430,13 +435,19 @@ width: 100%;
         }
     }
 
-        .bg-preview {
-            width: 100%;
-            height: 100dvh;
-           
-            background-position: center;
-            background-repeat: no-repeat;
+    .bg-preview{
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     
-        }
+}
+
+.main {
+
+    padding: 0 24px 68px 24px;
+
+}
 }
 
