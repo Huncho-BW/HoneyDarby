@@ -15,13 +15,13 @@ export default function HomeSpecail() {
           Let’s make it delicious.
         </h1>
       </div>
-      <NavLink className="navbar-border" to={"contact"}>
+      <NavLink className="navbar-border" to={"makeIq"}>
         {({ isActive }) => (
           <div
-            className={`navbar-border bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
+            className={`navbar-border cursor-pointer bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
           >
             <button
-              className={`navbar-text ${
+              className={`navbar-text cursor-pointer ${
                 isActive
                   ? "text-[#000000]"
                   : isHome

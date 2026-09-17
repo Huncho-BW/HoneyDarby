@@ -73,14 +73,18 @@ export default function Service() {
 
           <div className="cel-img">
             <div>
-              <span className="text-[#6f5b4b]  text-[12px] tracking-[2px] leading-[133%] font-['manrope']  ">
-                Temporary photo placeholder
+              <span className="text-[#6f5b4b] text-[12px] tracking-[2px] leading-[133%] font-['manrope']">
+                MOMENTS WORTH CELEBRATING
               </span>
 
-              <img src={previewTwo} alt="" className="celeb-img" />
+              <img
+                src={previewTwo}
+                alt="Catering at a celebration"
+                className="celeb-img"
+              />
 
-              <h1 className=" font-['Cormorant_Garamond'] text-[#000000] text-[36px] font-[300] leading-[111%]">
-                Your event imagery will live here.
+              <h1 className="font-['Cormorant_Garamond'] text-[#000000] text-[36px] font-[300] leading-[111%]">
+                Good food. Beautiful moments.
               </h1>
             </div>
           </div>
@@ -103,13 +107,13 @@ export default function Service() {
               from polished welcome trays to a menu built from the ground up,
               we’ll shape the food around the way you want guests to feel.
             </p>
-            <NavLink className="navbar-border" to={"makeIq"}>
+            <NavLink className="navbar-border" to={"/makeIq"}>
               {({ isActive }) => (
                 <div
-                  className={`navbar-border bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
+                  className={`navbar-border cursor-pointer bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
                 >
                   <button
-                    className={`navbar-text text-[#fff9f0] hover:text-[#000000] 
+                    className={`navbar-text cursor-pointer text-[#fff9f0] hover:text-[#000000] 
                      `}
                   >
                     Make an Inquiry

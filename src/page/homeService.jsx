@@ -1,19 +1,31 @@
 import React from "react";
-
+import { NavLink, useLocation } from "react-router";
 export default function HomeService() {
   const homeService = [
     {
       title: "Weddings",
-      name: " A generous feast for your most important yes.",
+      name: "Elegant feasts for your most memorable day.",
     },
-    { title: "Birthday & Celebration", name: "joyful menus made for sharing." },
+    {
+      title: "Birthday & Celebration",
+      name: "Delicious menus made for joyful moments.",
+    },
     {
       title: "Corporate Event",
-      name: "Confident hospitality for your people.",
+      name: "Professional catering for memorable gatherings.",
     },
-    { title: "Private Event", name: "Personal service for intimate tables." },
-    { title: "Small Chop", name: "Beautiful trays for welcome moments." },
-    { title: "Custom Catering", name: "A menu shaped around your occasion." },
+    {
+      title: "Private Event",
+      name: "Thoughtful menus and service for intimate occasions.",
+    },
+    {
+      title: "Small Chop",
+      name: "Beautiful bites crafted for every occasion.",
+    },
+    {
+      title: "Custom Catering",
+      name: "A tailored menu designed around your occasion.",
+    },
   ];
   return (
     <div className="home-service-header">
@@ -27,9 +39,12 @@ export default function HomeService() {
           </h1>
         </div>
         <div>
-          <button className="text-[#4a2e22] text-[14px] font-[300]  leading-[143%] font-['manrope']">
+          <NavLink
+            to={"service"}
+            className="text-[#4a2e22] cursor-pointer hover:underline text-[14px] font-[300]  leading-[143%] font-['manrope']"
+          >
             See all Services
-          </button>
+          </NavLink>
         </div>
       </div>
 

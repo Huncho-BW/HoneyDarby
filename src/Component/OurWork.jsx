@@ -75,18 +75,18 @@ export default function OurWork() {
       location: "Lekki, Lagos",
     },
     {
-      title: "Delivery Package  ",
-      image: image13,
-      orientation: "portrait",
-      name: "Wedding Celebration",
-      location: "Ikoyi, Lagos",
-    },
-    {
       title: "Delivery Package",
       image: image20,
       orientation: "landscape",
       name: "Private Dinner",
       location: "Lekki, Lagos",
+    },
+    {
+      title: "Delivery Package  ",
+      image: image13,
+      orientation: "portrait",
+      name: "Wedding Celebration",
+      location: "Ikoyi, Lagos",
     },
   ];
 

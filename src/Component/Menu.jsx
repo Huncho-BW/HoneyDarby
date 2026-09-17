@@ -148,13 +148,13 @@ export default function Menu() {
             <p className="text-[#fff9f0] text-left text-[16px]  leading-[150%] font-['manrope']  ">
               Tell us about your occasion and we’ll help shape the menu
             </p>
-            <NavLink className="navbar-border" to={"makeIq"}>
+            <NavLink className="navbar-border" to={"/makeIq"}>
               {({ isActive }) => (
                 <div
-                  className={`navbar-border bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
+                  className={`navbar-border cursor-pointer bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
                 >
                   <button
-                    className={`navbar-text text-[#fff9f0] hover:text-[#000000] 
+                    className={`navbar-text cursor-pointer text-[#fff9f0] hover:text-[#000000] 
                      `}
                   >
                     Make an Inquiry
