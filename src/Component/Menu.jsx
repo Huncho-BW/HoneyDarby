@@ -1,5 +1,6 @@
 import React from "react";
 import previewOne from "../assets/preview1.jpeg";
+import { NavLink, useLocation } from "react-router";
 export default function Menu() {
   const soups = [
     "Efo Riro Soup",
@@ -101,7 +102,7 @@ export default function Menu() {
               </div>
             </div>
             <div>
-              <h1 className=" text-left font-['Cormorant_Garamond'] text-[#2d211b] text-[24px] font-[300] leading-[133%] ">
+              <h1 className="  font-['Cormorant_Garamond'] text-[#2d211b] text-[24px] font-[300] leading-[133%] ">
                 Proteins & bites
               </h1>
               <div>
@@ -147,11 +148,20 @@ export default function Menu() {
             <p className="text-[#fff9f0] text-left text-[16px]  leading-[150%] font-['manrope']  ">
               Tell us about your occasion and we’ll help shape the menu
             </p>
-            <div className="navbar-border bg-[#000000]">
-              <button className="navbar-text text-[#fff9f0]">
-                make an Inquiry
-              </button>
-            </div>
+            <NavLink className="navbar-border" to={"makeIq"}>
+              {({ isActive }) => (
+                <div
+                  className={`navbar-border bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
+                >
+                  <button
+                    className={`navbar-text text-[#fff9f0] hover:text-[#000000] 
+                     `}
+                  >
+                    Make an Inquiry
+                  </button>
+                </div>
+              )}
+            </NavLink>
           </div>
         </section>
       </div>

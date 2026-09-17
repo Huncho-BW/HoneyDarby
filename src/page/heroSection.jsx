@@ -1,6 +1,8 @@
 import React from "react";
-
+import { NavLink, useLocation } from "react-router";
 export default function HeroSection() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <div className="hero-header">
       <div>
@@ -21,11 +23,30 @@ export default function HeroSection() {
       </div>
 
       <div className=" max-[798px]:flex-col  flex  gap-[16px] items-center mt-[20px] pb-[50px]">
-        <div className="navbar-border bg-[#fff9f0] leading-[143%] ">
-          <button>Make an Inquiry</button>
-        </div>
-        <div className="navbar-b-transparent">
-          <button className="leading-[143%] ">Explore Our Services</button>
+        <NavLink className="navbar-border" to={"contact"}>
+          {({ isActive }) => (
+            <div
+              className={`navbar-border bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
+            >
+              <button
+                className={`navbar-text ${
+                  isActive
+                    ? "text-[#000000]"
+                    : isHome
+                      ? "text-[#2d211b] hover:text-[#000000]"
+                      : "text-[#fff9f0] hover:text-[#000000]"
+                }`}
+              >
+                Make an Inquiry
+              </button>
+            </div>
+          )}
+        </NavLink>
+
+        <div className="navbar-b-transparent hover:bg-[#E6D5BE] hover:text-[#000000] ">
+          <button className="leading-[143%] text-[#fff9f0]  hover:text-[#000000]">
+            Explore Our Services
+          </button>
         </div>
       </div>
     </div>

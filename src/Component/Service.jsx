@@ -1,9 +1,11 @@
 import React from "react";
 
-import previewOne from "../assets/preview1.jpeg";
-import previewTwo from "../assets/preview2.jpeg";
-
+import previewOne from "../assets/hhhh.jpeg";
+import previewTwo from "../assets/download.jpeg";
+import { NavLink, useLocation } from "react-router";
 export default function Service() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <>
       <section className="section-one">
@@ -101,11 +103,20 @@ export default function Service() {
               from polished welcome trays to a menu built from the ground up,
               we’ll shape the food around the way you want guests to feel.
             </p>
-            <div className="navbar-border bg-[#000000]">
-              <button className="navbar-text text-[#fff9f0]">
-                Start an Inquiry
-              </button>
-            </div>
+            <NavLink className="navbar-border" to={"makeIq"}>
+              {({ isActive }) => (
+                <div
+                  className={`navbar-border bg-[#000000] hover:bg-[#E6D5BE] hover:text-[#000000] `}
+                >
+                  <button
+                    className={`navbar-text text-[#fff9f0] hover:text-[#000000] 
+                     `}
+                  >
+                    Make an Inquiry
+                  </button>
+                </div>
+              )}
+            </NavLink>
           </div>
         </section>
       </div>

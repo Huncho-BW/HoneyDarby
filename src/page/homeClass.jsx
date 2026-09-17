@@ -1,6 +1,9 @@
 import React from "react";
-import bgpreview from "../assets/bg-preview.jpeg";
+import bgpreview from "../assets/download1.jpeg";
+import { NavLink, useLocation } from "react-router";
 export default function HomeClass() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <div className="home-class-header">
       <div className="class-bg">
@@ -26,9 +29,25 @@ export default function HomeClass() {
             in front of it.
           </p>
         </div>
-        <div>
-          <button>Explore Our Menu</button>
-        </div>
+        <NavLink className="navbar-border" to={"contact"}>
+          {({ isActive }) => (
+            <div
+              className={`navbar-border bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
+            >
+              <button
+                className={`navbar-text ${
+                  isActive
+                    ? "text-[#000000]"
+                    : isHome
+                      ? "text-[#2d211b] hover:text-[#000000]"
+                      : "text-[#fff9f0] hover:text-[#000000]"
+                }`}
+              >
+                Explore Our Menu
+              </button>
+            </div>
+          )}
+        </NavLink>
       </div>
     </div>
   );

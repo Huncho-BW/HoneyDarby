@@ -43,6 +43,36 @@
     font-family: "manrope", serif;
 }
 
+
+/* Navbar links */
+.navbar-link,
+.mobile-menu-link {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden divider */
+.navbar-link::after,
+.mobile-menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+
+    transition: width 0.35s ease;
+}
+
+/* Hover + Active divider */
+.navbar-link:hover::after,
+.navbar-link-active::after,
+.mobile-menu-link:hover::after,
+.mobile-menu-link-active::after {
+    width: 100%;
+}
+
 .navbar-border{
     width: 144px;
     height: 44px;
@@ -70,7 +100,7 @@
 }
 
 .navbar-b-transparent > button{
-    color: #fff9f0;
+    
         font-size: 14px;
         font-weight: 300;
         font-family: "manrope", serif;

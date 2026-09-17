@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const location = useLocation();
@@ -24,26 +24,28 @@ export default function Navbar() {
               isHome ? "text-[#fff9f0]" : "text-[#000000]"
             }`}
           >
-            HoneyDerby
+            HoneyDaby
           </h1>
         </div>
       </NavLink>
+
       {/* Desktop Navigation */}
       <div className="desktop-navbar flex gap-[24px]">
         {navItems.map((item) => (
           <NavLink to={item.path} key={item.path}>
             {({ isActive }) => (
-              <button
-                className={`navbar-text ${
-                  isHome ? "text-[#fff9f0]" : "text-[#000000]"
-                } ${isActive ? "underline underline-offset-4" : ""}`}
+              <span
+                className={`navbar-link navbar-text ${
+                  isActive ? "navbar-link-active" : ""
+                } ${isHome ? "text-[#fff9f0]" : "text-[#000000]"}`}
               >
                 {item.label}
-              </button>
+              </span>
             )}
           </NavLink>
         ))}
       </div>
+
       {/* Desktop Inquiry Button */}
       <div className="desktop-navbar">
         <NavLink to={"makeIq"}>
@@ -104,8 +106,8 @@ export default function Navbar() {
                   <NavLink to={item.path}>
                     {({ isActive }) => (
                       <span
-                        className={`mobile-menu-link ${
-                          isActive ? "underline underline-offset-4" : ""
+                        className={`mobile-menu-link navbar-text ${
+                          isActive ? "mobile-menu-link-active" : ""
                         }`}
                       >
                         {item.label}
@@ -114,6 +116,7 @@ export default function Navbar() {
                   </NavLink>
                 </DropdownMenu.Item>
               ))}
+
               <DropdownMenu.Separator className="mobile-menu-separator" />
 
               <DropdownMenu.Item asChild className="mobile-inquiry-item">
