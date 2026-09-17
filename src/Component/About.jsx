@@ -37,9 +37,8 @@ export default function About() {
           </p>
         </div>
 
-        <div>
+        <div className="about-img">
           <img src={previewOne} alt="" />
-          <p>Temporary founder photography placeholder</p>
         </div>
       </section>
 
