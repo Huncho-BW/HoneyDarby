@@ -251,10 +251,7 @@ width: 100%;
         flex-direction: column;
         gap: 20px;
     }
-    .hero-header{
-        display: block;
-        
-    }
+   
 
     .navbar-border{
         width: 100%;
