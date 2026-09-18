@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useLocation, useNavigate } from "react-router";
+import { motion } from "motion/react";
 export default function HeroSection() {
   const location = useLocation();
 
@@ -11,7 +12,12 @@ export default function HeroSection() {
     navigate("/service");
   };
   return (
-    <div className="hero-header">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 1 }}
+      className="hero-header"
+    >
       <div>
         <span className="text-[#fff9f0] text-[12px] tracking-[4px] leading-[133%] font-['manrope']  ">
           Nigerian event catering
@@ -59,6 +65,6 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

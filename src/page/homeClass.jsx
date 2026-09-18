@@ -1,16 +1,35 @@
 import React from "react";
 import bgpreview from "../assets/download1.jpeg";
 import { NavLink, useLocation } from "react-router";
+import { motion } from "motion/react";
 export default function HomeClass() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
     <div className="home-class-header">
-      <div className="class-bg">
+      <motion.div
+        initial={{ x: 30, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{ duration: 2, delay: 1 }}
+        className="class-bg"
+      >
         <img src={bgpreview} alt="" />
-      </div>
+      </motion.div>
 
-      <div className=" class-col">
+      <motion.div
+        initial={{ x: -30, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{ duration: 2 }}
+        className=" class-col"
+      >
         <div>
           <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
             The menu
@@ -48,7 +67,7 @@ export default function HomeClass() {
             </div>
           )}
         </NavLink>
-      </div>
+      </motion.div>
     </div>
   );
 }

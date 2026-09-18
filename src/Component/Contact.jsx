@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "motion/react";
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
@@ -40,7 +41,6 @@ export default function Contact() {
       [name]: value,
     }));
 
-    // Remove the error for the field once the user starts correcting it
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -48,7 +48,6 @@ export default function Contact() {
       }));
     }
 
-    // Remove previous submission messages when the user edits the form
     if (submitStatus) {
       setSubmitStatus("");
     }
@@ -144,23 +143,58 @@ export default function Contact() {
 
   return (
     <div className="contact-padd">
+      {/* CONTACT INTRO */}
       <section className="contact-1">
-        <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
-          Contact & inquiry
-        </span>
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        >
+          <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
+            Contact & inquiry
+          </span>
 
-        <h1 className="font-['Cormorant_Garamond'] text-[#000000] text-[60px] font-[600] leading-[100%]">
-          Tell us what you’re planning.
-        </h1>
+          <h1 className="font-['Cormorant_Garamond'] text-[#000000] text-[60px] font-[600] leading-[100%]">
+            Tell us what you’re planning.
+          </h1>
 
-        <p className="text-[#6f5b4b] text-[16px] leading-[175%] font-['manrope']">
-          This is a front-end inquiry concept. Submit behavior can later route
-          to WhatsApp, phone, or HoneyDerby’s chosen channel.
-        </p>
+          <p className="text-[#6f5b4b] text-[16px] leading-[175%] font-['manrope']">
+            This is a front-end inquiry concept. Submit behavior can later route
+            to WhatsApp, phone, or HoneyDerby’s chosen channel.
+          </p>
+        </motion.div>
 
+        {/* CONTACT CARDS */}
         <div className="contact-grid">
-          {contact.map((item) => (
-            <a href={item.link} key={item.name}>
+          {contact.map((item, index) => (
+            <motion.a
+              href={item.link}
+              key={item.name}
+              initial={{
+                opacity: 0,
+                x: 70,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.25 + index * 0.15,
+                ease: "easeOut",
+              }}
+            >
               <div className="contact-border">
                 <span className="text-[#4a2e22]">{item.logo}</span>
 
@@ -172,14 +206,41 @@ export default function Contact() {
                   {item.subtext}
                 </p>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </section>
 
-      <section className="contact-2">
+      {/* FORM */}
+      <motion.section
+        className="contact-2"
+        initial={{
+          opacity: 0,
+          y: 70,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.15,
+        }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+          ease: "easeOut",
+        }}
+      >
         <form onSubmit={handleSubmit} className="flex flex-col gap-[20px]">
-          <div className="contact-2-grid">
+          {/* NAME + PHONE */}
+          <motion.div
+            className="contact-2-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <div className="contact-space">
               <label className="font-['manrope']" htmlFor="name">
                 Name
@@ -220,14 +281,25 @@ export default function Contact() {
               </div>
 
               {errors.phone && (
-                <p className="text-red-600  font-['manrope'] text-[12px] mt-[5px]">
+                <p className="text-red-600 font-['manrope'] text-[12px] mt-[5px]">
                   {errors.phone}
                 </p>
               )}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="contact-2-grid">
+          {/* EVENT TYPE + DATE */}
+          <motion.div
+            className="contact-2-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1,
+              ease: "easeOut",
+            }}
+          >
             <div className="contact-space">
               <label className="font-['manrope']" htmlFor="eventType">
                 Event type
@@ -284,9 +356,20 @@ export default function Contact() {
                 </p>
               )}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="contact-2-grid">
+          {/* GUESTS + LOCATION */}
+          <motion.div
+            className="contact-2-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+          >
             <div className="contact-space">
               <label className="font-['manrope']" htmlFor="guests">
                 Number of Guest
@@ -332,9 +415,20 @@ export default function Contact() {
                 </p>
               )}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="contact-space">
+          {/* SERVICE */}
+          <motion.div
+            className="contact-space"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.25,
+              ease: "easeOut",
+            }}
+          >
             <label className="font-['manrope']" htmlFor="service">
               Service needed
             </label>
@@ -355,9 +449,20 @@ export default function Contact() {
                 {errors.service}
               </p>
             )}
-          </div>
+          </motion.div>
 
-          <div className="contact-space">
+          {/* MESSAGE */}
+          <motion.div
+            className="contact-space"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+          >
             <label className="font-['manrope']" htmlFor="message">
               Additional Message
             </label>
@@ -370,8 +475,9 @@ export default function Contact() {
                 onChange={handleChange}
               ></textarea>
             </div>
-          </div>
+          </motion.div>
 
+          {/* STATUS */}
           {submitStatus === "success" && (
             <p className="text-green-700 font-['manrope'] text-[13px]">
               Your inquiry has been sent successfully.
@@ -384,7 +490,18 @@ export default function Contact() {
             </p>
           )}
 
-          <div className="contact-button-border">
+          {/* BUTTON */}
+          <motion.div
+            className="contact-button-border"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.35,
+              ease: "easeOut",
+            }}
+          >
             <button
               className="navbar-text"
               type="submit"
@@ -392,9 +509,9 @@ export default function Contact() {
             >
               {isSubmitting ? "Sending..." : "Make InQuiry"}
             </button>
-          </div>
+          </motion.div>
         </form>
-      </section>
+      </motion.section>
     </div>
   );
 }

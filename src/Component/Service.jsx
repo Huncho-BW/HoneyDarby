@@ -3,6 +3,7 @@ import React from "react";
 import previewOne from "../assets/hhhh.jpeg";
 import previewTwo from "../assets/download.jpeg";
 import { NavLink, useLocation } from "react-router";
+import { motion } from "motion/react";
 export default function Service() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -10,7 +11,11 @@ export default function Service() {
     <>
       <section className="section-one">
         <>
-          <div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
             <span className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
               Services
             </span>
@@ -22,14 +27,34 @@ export default function Service() {
               Every HoneyDaby service begins with listening: the people, the
               pace, the food you want everyone to remembe
             </p>
-          </div>
+          </motion.div>
         </>
       </section>
 
       <section className="section-two">
         <div className="wedding-service">
-          <img src={previewOne} alt="" />
-          <div className="section-center">
+          <motion.img
+            initial={{ x: 30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{ duration: 2, delay: 1 }}
+            src={previewOne}
+            alt=""
+          />
+
+          <motion.div
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{ duration: 2 }}
+            className="section-center"
+          >
             <span className="text-[#9a5b32] text-left text-[12px] tracking-[2px] leading-[133%] font-['manrope']  ">
               01
             </span>
@@ -43,11 +68,20 @@ export default function Service() {
             <p className="text-[#4a2e22] text-left text-[14px] tracking-[2px] leading-[143%] font-['manrope']  ">
               Inquire about weddings
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="celebration-service">
-          <div className="section-center">
+          <motion.div
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{ duration: 2 }}
+            className="section-center"
+          >
             <span className="text-[#9a5b32] text-left text-[12px] tracking-[2px] leading-[133%] font-['manrope']  ">
               02-04
             </span>
@@ -69,9 +103,18 @@ export default function Service() {
                 Private events
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="cel-img">
+          <motion.div
+            initial={{ x: 30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{ duration: 2, delay: 1 }}
+            className="cel-img"
+          >
             <div>
               <span className="text-[#6f5b4b] text-[12px] tracking-[2px] leading-[133%] font-['manrope']">
                 MOMENTS WORTH CELEBRATING
@@ -87,12 +130,21 @@ export default function Service() {
                 Good food. Beautiful moments.
               </h1>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <div className="sect-3-bg">
-        <section className="section-three">
+        <motion.section
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{ duration: 2, delay: 1 }}
+          className="section-three"
+        >
           <div>
             <span className="text-[#fff9f0] text-left text-[12px] tracking-[2px] leading-[133%] font-['manrope']  ">
               05-06
@@ -122,7 +174,7 @@ export default function Service() {
               )}
             </NavLink>
           </div>
-        </section>
+        </motion.section>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router";
+import { motion } from "motion/react";
 export default function HomeService() {
   const homeService = [
     {
@@ -28,7 +29,16 @@ export default function HomeService() {
     },
   ];
   return (
-    <div className="home-service-header">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{ duration: 2, delay: 1 }}
+      className="home-service-header"
+    >
       <div className="home-service">
         <div>
           <p className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
@@ -62,6 +72,6 @@ export default function HomeService() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

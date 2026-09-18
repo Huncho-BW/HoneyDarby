@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Menu } from "lucide-react";
-
+import { motion } from "motion/react";
 export default function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -15,7 +15,12 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="navbar">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="navbar"
+    >
       {/* Logo */}
       <NavLink to={"/"}>
         <div>
@@ -138,6 +143,6 @@ export default function Navbar() {
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
       </div>
-    </div>
+    </motion.div>
   );
 }

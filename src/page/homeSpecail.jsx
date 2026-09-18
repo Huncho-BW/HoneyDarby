@@ -1,10 +1,16 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router";
+import { motion } from "motion/react";
 export default function HomeSpecail() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
-    <div className="home-specail-header">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="home-specail-header"
+    >
       <div>
         <span className="text-[#fff9f0] text-[12px] tracking-[4px] leading-[133%] font-['manrope'] ">
           Planning something special?
@@ -34,6 +40,6 @@ export default function HomeSpecail() {
           </div>
         )}
       </NavLink>
-    </div>
+    </motion.div>
   );
 }

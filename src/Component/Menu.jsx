@@ -1,6 +1,7 @@
 import React from "react";
 import previewOne from "../assets/preview1.jpeg";
 import { NavLink, useLocation } from "react-router";
+import { motion } from "motion/react";
 export default function Menu() {
   const soups = [
     "Efo Riro Soup",
@@ -47,7 +48,12 @@ export default function Menu() {
   return (
     <>
       <section className=" menu-section1 section-menu-padd">
-        <div className="flex flex-col gap-[20px]">
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="flex flex-col gap-[20px]"
+        >
           <span className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
             Our Menu
           </span>
@@ -59,13 +65,28 @@ export default function Menu() {
             A starting point for event planning—not an online order list. Final
             dishes and quantities are shaped around your occasion
           </p>
-        </div>
+        </motion.div>
 
-        <img src={previewOne} alt="" />
+        <motion.img
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, delay: 1 }}
+          src={previewOne}
+          alt=""
+        />
       </section>
 
       <div className="menu-food-bg">
-        <section className="menu-section2 section-menu-padd">
+        <motion.section
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{ duration: 3, delay: 1 }}
+          className="menu-section2 section-menu-padd"
+        >
           <h1 className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
             Nigerian / African cuisine
           </h1>
@@ -117,10 +138,19 @@ export default function Menu() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
 
-      <section className="menu-section3 section-menu-padd ">
+      <motion.section
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{ duration: 2, delay: 1 }}
+        className="menu-section3 section-menu-padd "
+      >
         <span className="text-[#9a5b32] text-left text-[12px] tracking-[3px] leading-[133%] font-['manrope']  ">
           International / Continental
         </span>
@@ -137,10 +167,19 @@ export default function Menu() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       <div className="menu-plan-bg">
-        <section className="menu-section4 section-menu-padd">
+        <motion.section
+          initial={{ y: 30, opacity: 0 }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2, delay: 1 }}
+          className="menu-section4 section-menu-padd"
+        >
           <div className="">
             <h1 className=" text-left font-['Cormorant_Garamond'] text-[#fff9f0] text-[48px] font-[600] leading-[100%] ">
               Planning an event?
@@ -163,7 +202,7 @@ export default function Menu() {
               )}
             </NavLink>
           </div>
-        </section>
+        </motion.section>
       </div>
     </>
   );

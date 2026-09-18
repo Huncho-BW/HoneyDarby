@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import previewOne from "../assets/sweet.jpg";
 
 export default function About() {
@@ -22,8 +23,21 @@ export default function About() {
 
   return (
     <>
+      {/* SECTION 1 */}
       <section className="about-section1 about-padd">
-        <div className="flex flex-col justify-center item-center gap-[20px]">
+        <motion.div
+          className="flex flex-col justify-center item-center gap-[20px]"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        >
           <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
             About HoneyDaby
           </span>
@@ -36,16 +50,41 @@ export default function About() {
             HoneyDaby brings together thoughtful catering, beautiful
             presentation, and warm service to make every occasion special.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="about-img">
+        <motion.div
+          className="about-img"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.9,
+            delay: 0.35,
+            ease: "easeOut",
+          }}
+        >
           <img src={previewOne} alt="HoneyDerby catering" />
-        </div>
+        </motion.div>
       </section>
 
+      {/* SECTION 2 */}
       <div className="about-section2-bg">
         <section className="about-padd about-section1">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -70 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+          >
             <h1 className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
               The story
             </h1>
@@ -53,24 +92,68 @@ export default function About() {
             <h2 className="font-['Cormorant_Garamond'] text-[#2d211b] text-[38px] font-[600] leading-[111%]">
               Food, service, and moments worth remembering.
             </h2>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 70 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.25,
+              ease: "easeOut",
+            }}
+          >
             <p className="text-[#6f5b4b] text-[16px] leading-[200%] font-['manrope']">
               With professional training in catering and experience in event
               planning, HoneyDerby creates delicious food and thoughtfully
               coordinated experiences for every occasion.
             </p>
-          </div>
+          </motion.div>
         </section>
       </div>
 
+      {/* SECTION 3 */}
       <section className="about-section3 about-padd">
-        <span className="divider"></span>
+        <motion.span
+          className="divider"
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 1, scaleX: 1 }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        ></motion.span>
 
         <div className="about-grid">
-          {foodQuilty.map((item) => (
-            <div key={item.id}>
+          {foodQuilty.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{
+                opacity: 0,
+                x: index % 2 === 0 ? -50 : 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+            >
               <span className="text-[#9a5b32] text-[12px] tracking-[2px] leading-[133%] font-['manrope']">
                 {item.id}
               </span>
@@ -82,7 +165,7 @@ export default function About() {
               <p className="text-[#6f5b4b] text-[14px] leading-[171%] font-['manrope']">
                 {item.subText}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
