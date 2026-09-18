@@ -1,8 +1,15 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 export default function HeroSection() {
   const location = useLocation();
+
   const isHome = location.pathname === "/";
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/service");
+  };
   return (
     <div className="hero-header">
       <div>
@@ -11,7 +18,7 @@ export default function HeroSection() {
         </span>
       </div>
       <div>
-        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px] max-[767px]:text-[86px]  font-[600] leading-[100%] ">
+        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px] max-[767px]:text-[76px]  font-[600] leading-[100%] ">
           Made for the moments everyone remembers
         </h1>
       </div>
@@ -26,7 +33,7 @@ export default function HeroSection() {
         <NavLink className="navbar-border" to={"/makeIq"}>
           {({ isActive }) => (
             <div
-              className={`navbar-border cursor-pointer bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
+              className={`navbar-border  cursor-pointer bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
             >
               <button
                 className={`navbar-text cursor-pointer ${
@@ -42,13 +49,15 @@ export default function HeroSection() {
             </div>
           )}
         </NavLink>
-        <NavLink to={"service"}>
-          <div className="navbar-b-transparent cursor-pointer hover:bg-[#E6D5BE] hover:text-[#000000] ">
-            <button className="leading-[143%] cursor-pointer text-[#fff9f0]  hover:text-[#000000]">
-              Explore Our Services
-            </button>
-          </div>
-        </NavLink>
+
+        <div className="navbar-b-transparent hover:bg-[#E6D5BE] cursor-pointer hover:text-[#000000] ">
+          <button
+            onClick={handleClick}
+            className="leading-[143%] cursor-pointer text-[#fff9f0]  hover:text-[#000000]"
+          >
+            Explore Our Services
+          </button>
+        </div>
       </div>
     </div>
   );
