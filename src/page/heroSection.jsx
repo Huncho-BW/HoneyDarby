@@ -23,13 +23,13 @@ export default function HeroSection() {
       </div>
 
       <div className=" max-[798px]:flex-col  flex  gap-[16px] items-center mt-[20px] pb-[50px]">
-        <NavLink className="navbar-border" to={"contact"}>
+        <NavLink className="navbar-border" to={"/makeIq"}>
           {({ isActive }) => (
             <div
-              className={`navbar-border bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
+              className={`navbar-border cursor-pointer bg-[#fff9f0]  ${isActive ? "bg-[#E6D5BE]" : "bg-[#000000] hover:bg-[#E6D5BE]"}`}
             >
               <button
-                className={`navbar-text ${
+                className={`navbar-text cursor-pointer ${
                   isActive
                     ? "text-[#000000]"
                     : isHome
@@ -42,12 +42,13 @@ export default function HeroSection() {
             </div>
           )}
         </NavLink>
-
-        <div className="navbar-b-transparent hover:bg-[#E6D5BE] hover:text-[#000000] ">
-          <button className="leading-[143%] text-[#fff9f0]  hover:text-[#000000]">
-            Explore Our Services
-          </button>
-        </div>
+        <NavLink to={"service"}>
+          <div className="navbar-b-transparent cursor-pointer hover:bg-[#E6D5BE] hover:text-[#000000] ">
+            <button className="leading-[143%] cursor-pointer text-[#fff9f0]  hover:text-[#000000]">
+              Explore Our Services
+            </button>
+          </div>
+        </NavLink>
       </div>
     </div>
   );
