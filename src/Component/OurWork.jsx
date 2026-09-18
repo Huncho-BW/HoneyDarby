@@ -60,13 +60,7 @@ export default function OurWork() {
       name: "Private Dinner",
       location: "Lekki, Lagos",
     },
-    {
-      title: "Delivery Package  ",
-      image: image9,
-      orientation: "portrait",
-      name: "Wedding Celebration",
-      location: "Ikoyi, Lagos",
-    },
+
     {
       title: "Delivery Package",
       image: image11,
@@ -75,11 +69,11 @@ export default function OurWork() {
       location: "Lekki, Lagos",
     },
     {
-      title: "Delivery Package",
-      image: image20,
-      orientation: "landscape",
-      name: "Private Dinner",
-      location: "Lekki, Lagos",
+      title: "Delivery Package  ",
+      image: image9,
+      orientation: "portrait",
+      name: "Wedding Celebration",
+      location: "Ikoyi, Lagos",
     },
     {
       title: "Delivery Package  ",
@@ -87,6 +81,13 @@ export default function OurWork() {
       orientation: "portrait",
       name: "Wedding Celebration",
       location: "Ikoyi, Lagos",
+    },
+    {
+      title: "Delivery Package",
+      image: image20,
+      orientation: "landscape",
+      name: "Private Dinner",
+      location: "Lekki, Lagos",
     },
   ];
 

@@ -25,7 +25,7 @@ export default function About() {
       <section className="about-section1 about-padd">
         <div className="flex flex-col justify-center item-center gap-[20px]">
           <span className="text-[#9a5b32] text-[12px] tracking-[3px] leading-[133%] font-['manrope']">
-            About HoneyDerby
+            About HoneyDaby
           </span>
 
           <h1 className="font-['Cormorant_Garamond'] text-[#000000] text-[72px] font-[600] leading-[100%]">
@@ -33,7 +33,7 @@ export default function About() {
           </h1>
 
           <p className="text-[#6f5b4b] text-[16px] leading-[200%] font-['manrope']">
-            HoneyDerby brings together thoughtful catering, beautiful
+            HoneyDaby brings together thoughtful catering, beautiful
             presentation, and warm service to make every occasion special.
           </p>
         </div>

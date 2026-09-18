@@ -19,7 +19,7 @@ export default function Service() {
               around your occasion.
             </h1>
             <p className=" text-left text-[#6f5b4b] text-[16px]  leading-[200%] font-['manrope']  ">
-              Every HoneyDerby service begins with listening: the people, the
+              Every HoneyDaby service begins with listening: the people, the
               pace, the food you want everyone to remembe
             </p>
           </div>

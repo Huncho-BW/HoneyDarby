@@ -9,7 +9,7 @@
 .ourproject-display {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 52px;
 }
 
 .project-row {

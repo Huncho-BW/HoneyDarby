@@ -3,6 +3,7 @@ import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import "./App.css";
+import ScrollToTop from "./Component/ScrollTop";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
 ``;
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <BrowserRouter basename="/HoneyDarby/">
+        <ScrollToTop />
         <AppRouter />
       </BrowserRouter>
     </>

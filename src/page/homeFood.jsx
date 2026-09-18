@@ -19,7 +19,7 @@ export default function HomeFood() {
           className="text-[#
 6f5b4b] text-[16px]  leading-[200%] font-['manrope']"
         >
-          HoneyDerby Catering Service brings Nigerian flavour, considered
+          HoneyDaby Catering Service brings Nigerian flavour, considered
           presentation, and calm professional care to weddings, intimate
           gatherings, corporate events, and custom occasions
         </p>
