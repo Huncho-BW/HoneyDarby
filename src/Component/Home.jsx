@@ -9,8 +9,6 @@ import HomeSpecail from "../page/homeSpecail";
 export default function Home() {
   return (
     <>
-      <HeroSection />
-
       <div>
         <HomeFood />
 
