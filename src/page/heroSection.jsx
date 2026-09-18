@@ -11,7 +11,7 @@ export default function HeroSection() {
         </span>
       </div>
       <div>
-        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px]  font-[600] leading-[100%] ">
+        <h1 className="font-['Cormorant_Garamond'] text-[#fff9f0] text-[96px] max-[767px]:text-[86px]  font-[600] leading-[100%] ">
           Made for the moments everyone remembers
         </h1>
       </div>
